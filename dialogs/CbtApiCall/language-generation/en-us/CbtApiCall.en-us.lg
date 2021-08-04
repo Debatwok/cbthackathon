@@ -1,0 +1,6 @@
+[import](common.lg)
+
+# SendActivity_DfdVh5()
+[Activity
+    Text = test : ${string(dialog.api_response.content.data.member_history_details, 'en')}
+]

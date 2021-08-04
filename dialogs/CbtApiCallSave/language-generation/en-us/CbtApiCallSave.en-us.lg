@@ -1,0 +1,6 @@
+[import](common.lg)
+
+# SendActivity_30vIKV()
+[Activity
+    Text = test : ${string(dialog.api_response.content.data, 'en')}
+]

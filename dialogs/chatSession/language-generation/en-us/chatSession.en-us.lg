@@ -1,0 +1,372 @@
+[import](common.lg)
+
+# SendActivity_L2VA3r()
+[Activity
+    Text = I am looking forward to help you quit.
+]
+
+# ChoiceInput_Prompt_AmoEza()
+[Activity
+    Text = ${ChoiceInput_Prompt_AmoEza_text()}
+]
+
+# ChoiceInput_Prompt_AmoEza_text()
+- ```Which of these emotions do you most associate before you smoke?
+
+Select your emotion:```
+# ChoiceInput_Prompt_5MiFjq()
+[Activity
+    Text = Which of these activities intensify your urge to smoke?
+]
+
+# ChoiceInput_Prompt_wCP0Oe()
+[Activity
+    Text = ${ChoiceInput_Prompt_wCP0Oe_text()}
+]
+
+# ChoiceInput_Prompt_wCP0Oe_text()
+- ```Lets start by how are you feeling  today?
+
+Select your emotion:```
+# ChoiceInput_Prompt_zsg4Ib()
+[Activity
+    Text = What inspires your feeling of anger?
+]
+
+# ChoiceInput_Prompt_VYUjKj()
+[Activity
+    Text = What inspires your feeling of disgust?
+]
+
+# ChoiceInput_Prompt_dAevoe()
+[Activity
+    Text = What inspires your feeling of Fear?
+]
+
+# ChoiceInput_Prompt_IDpygJ()
+[Activity
+    Text = What inspires your feeling of being at peace?
+]
+
+# ChoiceInput_Prompt_WOLtmf()
+[Activity
+    Text = What inspires your feeling of happiness?
+]
+
+# ChoiceInput_Prompt_0dtXVc()
+[Activity
+    Text = What inspires your feeling of sadness?
+]
+
+# SendActivity_czf2AR()
+[Activity
+    Text = confirm ${user.chat.emotion1}
+]
+
+# ConfirmInput_Prompt_PoiPw8()
+[Activity
+    Text = Do not worry ${user.initial.name}, things will get better, did you feel the need to smoke?  
+]
+
+# ConfirmInput_Prompt_wGyLyM()
+[Activity
+    Text = Did you overcome the urge to smoke?
+]
+
+# NumberInput_Prompt_5mSMlj()
+[Activity
+    Text = ${NumberInput_Prompt_5mSMlj_text()}
+]
+
+# NumberInput_Prompt_5mSMlj_text()
+- ```How strong was your craving?
+
+Scale of 1 \-10```
+# SendActivity_kLxyyd()
+[Activity
+    Text = That is wonderful! Keep it up!
+]
+
+# SendActivity_UTp4MZ()
+[Activity
+    Text = This is great to hear! A battle won, now let's focus on the war!
+]
+
+# NumberInput_Prompt_ocWuDt()
+[Activity
+    Text = ${NumberInput_Prompt_ocWuDt_text()}
+]
+
+# NumberInput_Prompt_ocWuDt_text()
+- ```How strong was your craving?
+
+Scale of 1 \-10```
+# ChoiceInput_Prompt_5WkWkC()
+[Activity
+    Text = What coping strategy did you use to deal with the craving?
+]
+
+# SendActivity_lx5Vqr()
+[Activity
+    Text = Great to know this strategy worked for you!
+]
+
+# SendActivity_RsKeZK()
+[Activity
+    Text = Let's try the same strategy the next time you get the urge.
+]
+
+# NumberInput_Prompt_nmtmzl()
+[Activity
+    Text = ${NumberInput_Prompt_nmtmzl_text()}
+]
+
+# NumberInput_Prompt_nmtmzl_text()
+- ```How Strong was your craving?
+
+Scale of 1 \-10```
+# ChoiceInput_Prompt_YMIR7K()
+[Activity
+    Text = How did you feel after smoking?
+]
+
+# ConfirmInput_Prompt_yZbklw()
+[Activity
+    Text = Did the feeling of ${user.chat.useremotion} caused you to take a smoke?
+]
+
+# TextInput_Prompt_bjLRMh()
+[Activity
+    Text = Can you share what triggered your urge to smoke? 
+]
+
+# ConfirmInput_Prompt_k03Qg8()
+[Activity
+    Text = Does this feeling often give you the urge to smoke? 
+]
+
+# ChoiceInput_Prompt_hfvPZU()
+[Activity
+    Text = Here are some of the coping mechanisms that can help. 
+]
+
+# ConfirmInput_Prompt_ZGg9IV()
+[Activity
+    Text = Did this help? 
+]
+
+# SendActivity_iTq2nq()
+[Activity
+    Text = Great to hear this! You are doing great. Will get in touch again tomorrow. Keep up the progress!
+]
+
+# SendActivity_bStU7F()
+[Activity
+    Text = ${SendActivity_bStU7F_text()}
+]
+
+# SendActivity_bStU7F_text()
+- ```That's perfectly fine! We can do it.
+
+Lets start with a mindfulness exercise. 
+
+Lets start by challenging your smoking urge.
+
+In this exercise, you will be using your senses to connect with your surrounding.```
+# ConfirmInput_Prompt_EOmraH()
+[Activity
+    Text = Sit down in a comfy chair.
+]
+
+# ConfirmInput_Prompt_vpOPFe()
+[Activity
+    Text = Lean all the way back and plant your feet into the ground.
+]
+
+# ConfirmInput_Prompt_S5AOAj()
+[Activity
+    Text = ${ConfirmInput_Prompt_S5AOAj_text()}
+]
+
+# ConfirmInput_Prompt_S5AOAj_text()
+- ```Wonderful, now reach out and touch something close to you, firmly planting your palm
+Maybe it’s a table, chair, blanket, pillow, or your own knee.
+```
+# ConfirmInput_Prompt_HDZ7io()
+[Activity
+    Text = Think about what it feels like against your hand. 
+]
+
+# ConfirmInput_Prompt_2eOVv4()
+[Activity
+    Text = ${ConfirmInput_Prompt_2eOVv4_text()}
+]
+
+# ConfirmInput_Prompt_2eOVv4_text()
+- ```Now take a look at your hand
+Pick a line on your palm and trace it all the way from beginning to end 
+Notice where the line curves and whether it branches off
+```
+# ConfirmInput_Prompt_gjqoeu()
+[Activity
+    Text = Do this with all the lines on your palm
+]
+
+# ConfirmInput_Prompt_K3QIka()
+[Activity
+    Text = Now compare where the lines on your palms are different. Take your time and put your phone down for a moment if it helps.
+]
+
+# ChoiceInput_Prompt_LPLQvl()
+[Activity
+    Text = Lastly. Let yourself become aware of what you are able to hear right now
+]
+
+# SendActivity_nQKGrc()
+[Activity
+    Text = Great! Glad you completed the exercise with me. This is what we did, grounding techniques like this can help when you are dealing with strong impulses to smoke. You can distract yourself from negative thought like this by focusing your mind on taking the stock of a more concrete reality: where you are, what you are doing and what its like. 
+]
+
+# ChoiceInput_Prompt_qENpyP()
+[Activity
+    Text = I am wondering, how would you say you are feeling after this exercise. 
+]
+
+# SendActivity_tWtEBp()
+[Activity
+    Text = ${SendActivity_tWtEBp_text()}
+]
+
+# SendActivity_tWtEBp_text()
+- ```Thank wonderful to know. Glad we could help!
+You did great, I will see you tomorrow but in the meantime, reach out whenever you need. 
+```
+# SendActivity_yThXYG()
+[Activity
+    Text = Bye
+]
+
+# SendActivity_bpWGyT()
+[Activity
+    Text = ${SendActivity_bpWGyT_text()}
+]
+
+# SendActivity_bpWGyT_text()
+- ```Oh no ${user.initial.name}! I am sorry you are feeling ${user.chat.exercisestep10}. I will be sure to let my creators know.
+It's hard to hit pause on the thoughts that consume us but you did a great job today. 
+I will see you tomorrow but in the meantime, reach out whenever you need.
+```
+# ConfirmInput_Prompt_fzKPfv()
+[Activity
+    Text = Great to know Deb, did you feel the need to smoke?
+]
+
+# SendActivity_IDSzgq()
+[Activity
+    Text = That is wonderful! Keep it up!
+]
+
+# SendActivity_kDV8GQ()
+[Activity
+    Text = need to smoke : ${user.chat.needtosmoke}
+]
+
+# SendActivity_l9qD36()
+[Activity
+    Attachments = ${json(SendActivity_l9qD36_attachment_6C1wfk())}
+]
+
+# SendActivity_l9qD36_attachment_6C1wfk()
+> Feel yourself connecting to the ground, almost like you are growing out of it.
+> https://docs.microsoft.com/en-us/adaptive-cards/getting-started/bots
+- ```{
+    "type": "AdaptiveCard",
+    "version": "1.0",
+    "body": [
+        
+        {
+            "type": "TextBlock",
+            "spacing": "Medium",
+            "size": "Medium",
+            "weight": "Bolder",
+            "text": "Feel yourself connecting to the ground, almost like you are growing out of it.",
+            "wrap": true
+        },
+        {
+            "type": "ColumnSet",
+            "minHeight": "200px",
+            "columns": [
+                {
+                    "type": "Column",
+                    "backgroundImage": {
+                        "url": "https://media.giphy.com/media/kxMQXnH7ucS9q/source.gif",
+                        "verticalAlignment": "Center"
+                    }
+                }
+            ]
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "Ok"
+        }
+    ]
+}```
+# ConfirmInput_Prompt_ixx3XM()
+[Activity
+    Text = ${ConfirmInput_Prompt_ixx3XM_text()}
+]
+
+# ConfirmInput_Prompt_ixx3XM_text()
+- ```Notice all the places you are physically connected to your object.
+
+Imagine you are adsorbing all  its stillness or strength.```
+# SendActivity_3xd9kl()
+[Activity
+    Attachments = ${json(SendActivity_3xd9kl_attachment_UCfqST())}
+]
+
+# SendActivity_3xd9kl_attachment_UCfqST()
+> Notice the rise and fall of the sound and whether there are moments of silence in between.
+> https://docs.microsoft.com/en-us/adaptive-cards/getting-started/bots
+- ```{
+    "type": "AdaptiveCard",
+    "version": "1.0",
+    "body": [
+        
+        {
+            "type": "TextBlock",
+            "spacing": "Medium",
+            "size": "Medium",
+            "weight": "Bolder",
+            "text": "Notice the rise and fall of the sound and whether there are moments of silence in between.",
+            "wrap": true
+        },
+        {
+            "type": "ColumnSet",
+            "minHeight": "200px",
+            "columns": [
+                {
+                    "type": "Column",
+                    "backgroundImage": {
+                        "url": "https://media.giphy.com/media/Qvp6Z2fidQR34IcwQ5/source.gif",
+                        "verticalAlignment": "Center"
+                    }
+                }
+            ]
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "actions": [
+        {
+            "type": "Action.Submit",
+            "title": "Ok"
+        }
+    ]
+}```
+# SendActivity_tY61Yw()
+[Activity
+    Text = confirm ${user.chat.copingmechanisms}
+]

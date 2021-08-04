@@ -1,0 +1,72 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "TgLAwD",
+    "name": "ApiCall",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "TWoO84"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.HttpRequest",
+          "$designer": {
+            "id": "uGBiZl"
+          },
+          "resultProperty": "dialog.api_response",
+          "method": "POST",
+          "url": "https://centrallogmaneger.hasura.app/v1/graphql",
+          "body": "{\"query\":\"query MyQuery {\\n  HTTP_STATUS_LOG {\\n    HTTP_STATUS\\n    HTTP_STATUS_COUNT\\n    HTTP_STATUS_DESC\\n  }\\n}\\n\",\"variables\":null,\"operationName\":\"MyQuery\"}",
+          "contentType": "application/json; charset=utf-8",
+          "headers": {
+            "Content-Type": "application/xml",
+            "x-hasura-admin-secret": "SjSW9KIrJB43o93W3EaSMfVExYHJVaBKBeI7UaBTLqoz7nLO2lYgHRQlR0sOquLO"
+          },
+          "responseType": "json"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "J4wR8b"
+          },
+          "condition": "dialog.api_response.statusCode == 200",
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "4uA6lt"
+              },
+              "activity": "${SendActivity_4uA6lt()}"
+            },
+            {
+              "$kind": "Microsoft.SetProperty",
+              "$designer": {
+                "id": "kQSPPL"
+              },
+              "property": "user.apidata",
+              "value": "=dialog.api_response"
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "3FCpRI"
+              },
+              "activity": "${SendActivity_3FCpRI()}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "ApiCall.lg",
+  "recognizer": "ApiCall.lu.qna",
+  "id": "ApiCall"
+}

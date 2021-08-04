@@ -1,0 +1,54 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "QVaWrZ",
+    "name": "QNAMakerConnectDialog",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "EFy7YF"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "NK4ZgW"
+          },
+          "activity": "${SendActivity_NK4ZgW()}"
+        },
+        {
+          "$kind": "Microsoft.QnAMakerDialog",
+          "$designer": {
+            "id": "WYSInD"
+          },
+          "knowledgeBaseId": "edb151b3-e024-4699-997c-0541ff35cf1d",
+          "endpointKey": "211798b3-381b-41d6-a97b-1e8b211fcae3",
+          "hostname": "https://cbtqnamacker.azurewebsites.net/qnamaker",
+          "noAnswer": "Sorry, I did not find an answer.",
+          "threshold": 0.3,
+          "activeLearningCardTitle": "Did you mean:",
+          "cardNoMatchText": "None of the above.",
+          "cardNoMatchResponse": "Thanks for the feedback.",
+          "top": 3,
+          "isTest": false
+        },
+        {
+          "$kind": "Microsoft.EndDialog",
+          "$designer": {
+            "id": "c3BjKO"
+          }
+        }
+      ]
+    }
+  ],
+  "generator": "QNAMakerConnectDialog.lg",
+  "recognizer": "QNAMakerConnectDialog.lu.qna",
+  "id": "QNAMakerConnectDialog"
+}

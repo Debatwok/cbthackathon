@@ -1,0 +1,8 @@
+{
+  "$kind": "Microsoft.MultiLanguageRecognizer",
+  "id": "LUIS_ToBackOff",
+  "recognizers": {
+    "en-us": "ToBackOff.en-us.lu",
+    "": "ToBackOff.en-us.lu"
+  }
+}

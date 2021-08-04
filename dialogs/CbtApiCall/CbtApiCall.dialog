@@ -1,0 +1,65 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "Yi7fBa",
+    "name": "CbtApiCallFetch",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "F4g6fK"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "w9kQUX"
+          },
+          "property": "user.db.name",
+          "value": "${user.initial.name}"
+        },
+        {
+          "$kind": "Microsoft.HttpRequest",
+          "$designer": {
+            "id": "2C6MbU"
+          },
+          "resultProperty": "dialog.api_response",
+          "method": "POST",
+          "url": "https://cbt.hasura.app/v1/graphql",
+          "body": "{\"query\":\"query MyQuery {\\n  member_history_details(where: {member_name: {_eq: \\\"${user.db.name}\\\"}}) {\\n    feeling_after_exercise\\n  }\\n}\\n\",\"variables\":null,\"operationName\":\"MyQuery\"}",
+          "headers": {
+            "Content-Type": "application/json",
+            "x-hasura-admin-secret": "i9osI6mAd8Hf4tX8jaAp6NxhXce58rBjxFlk4hx2dasEPpqonFeRdzyow01l87HA"
+          },
+          "contentType": "application/json; charset=utf-8",
+          "responseType": "json"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "Twihwd"
+          },
+          "condition": "dialog.api_response.statusCode == 200",
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "DfdVh5"
+              },
+              "activity": "${SendActivity_DfdVh5()}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "CbtApiCall.lg",
+  "recognizer": "CbtApiCall.lu.qna",
+  "id": "CbtApiCall"
+}

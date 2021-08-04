@@ -1,0 +1,21 @@
+
+# TextInput_Response_ryC4AR
+> add some expected user responses:
+- My name is Debabrata Behera.
+- I am Debabrata Behera.
+- I liked to be call Deb.
+- Debabrata Behera
+- Deb
+
+
+> entity definitions:
+@ prebuilt personName
+
+
+# quitSmoking
+> add some example phrases to trigger this intent:
+> - please tell me the weather
+> - what is the weather like in {city=Seattle}
+
+> entity definitions:
+> @ ml city

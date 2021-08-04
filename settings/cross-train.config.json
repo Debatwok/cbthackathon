@@ -1,0 +1,12 @@
+{
+  "ToBackOff.en-us": {
+    "rootDialog": true,
+    "triggers": {
+      "": [
+        "CbtApiCall.en-us",
+        "Initial_Intro.en-us",
+        "chatSession.en-us"
+      ]
+    }
+  }
+}

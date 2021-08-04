@@ -1,0 +1,13 @@
+[import](common.lg)
+
+# SendActivity_DidNotUnderstand()
+[Activity
+    Text = ${SendActivity_DidNotUnderstand_text()}
+]
+
+# SendActivity_DidNotUnderstand_text()
+- Sorry, I didn't get that.
+# TextInput_Prompt_ryC4AR()
+[Activity
+    Text = Hi, I am ToBackOff, what can I call you?
+]

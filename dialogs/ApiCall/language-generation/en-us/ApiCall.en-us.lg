@@ -1,0 +1,11 @@
+[import](common.lg)
+
+# SendActivity_3FCpRI()
+[Activity
+    Text = result : ${user.apidata}
+]
+
+# SendActivity_4uA6lt()
+[Activity
+    Text = test : ${string(dialog.api_response.content.data.HTTP_STATUS_LOG, 'en')}
+]

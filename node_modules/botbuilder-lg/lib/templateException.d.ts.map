@@ -1,0 +1,1 @@
+{"version":3,"file":"templateException.d.ts","sourceRoot":"","sources":["../src/templateException.ts"],"names":[],"mappings":"AAAA;;GAEG;AACH;;;GAGG;AACH,OAAO,EAAE,UAAU,EAAE,MAAM,cAAc,CAAC;AAE1C;;GAEG;AACH,qBAAa,iBAAkB,SAAQ,KAAK;IACxC,OAAO,CAAC,WAAW,CAAe;IAElC;;;;OAIG;gBACgB,CAAC,EAAE,MAAM,EAAE,WAAW,EAAE,UAAU,EAAE;IAMvD;;OAEG;IACI,aAAa,IAAI,UAAU,EAAE;CAGvC"}

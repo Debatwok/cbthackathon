@@ -1,0 +1,73 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "pH496W",
+    "name": "CbtApiCallSave",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "gADXQb"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SetProperties",
+          "$designer": {
+            "id": "ubYKgP"
+          },
+          "assignments": [
+            {
+              "property": "user.db.name",
+              "value": "${user.initial.name}"
+            },
+            {
+              "property": "user.db.exercise",
+              "value": "${user.chat.exercisestep10}"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.HttpRequest",
+          "$designer": {
+            "id": "MP0QJF"
+          },
+          "resultProperty": "dialog.api_response",
+          "method": "POST",
+          "url": "https://cbt.hasura.app/v1/graphql",
+          "headers": {
+            "content-type": "application/json",
+            "x-hasura-admin-secret": "i9osI6mAd8Hf4tX8jaAp6NxhXce58rBjxFlk4hx2dasEPpqonFeRdzyow01l87HA"
+          },
+          "contentType": "application/json; charset=utf-8",
+          "responseType": "json",
+          "body": "{\"query\":\"mutation MyMutation {\\n  insert_member_history_details(objects: {member_name: \\\"${user.db.name}\\\", feeling_after_exercise: \\\"${user.db.exercise}\\\"}) {\\n    affected_rows\\n  }\\n}\\n\",\"variables\":null,\"operationName\":\"MyMutation\"}"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "gY0GVy"
+          },
+          "condition": "dialog.api_response.statusCode == 200",
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "30vIKV"
+              },
+              "activity": "${SendActivity_30vIKV()}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "CbtApiCallSave.lg",
+  "recognizer": "CbtApiCallSave.lu.qna",
+  "id": "CbtApiCallSave"
+}
