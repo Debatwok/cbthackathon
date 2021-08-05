@@ -1,0 +1,690 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "qQHTYl",
+    "name": "Day2Char",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "Day2ChatBeginDialog",
+        "description": "",
+        "id": "R0S5Eh"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "QifwNV"
+          },
+          "condition": "user.db.out.lastChatIntent == 'positive'",
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "4eNpBa"
+              },
+              "activity": "${SendActivity_4eNpBa()}"
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "P9Ikqx"
+              },
+              "activity": "${SendActivity_P9Ikqx()}"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "yslABe"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_yslABe()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or "
+          },
+          "property": "user.chat2.feelingToday",
+          "style": "heroCard",
+          "choices": [
+            "Anger",
+            "Disgust",
+            "Fear",
+            "At peace",
+            "Happiness",
+            "Sadness"
+          ]
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "kAtFYK"
+          },
+          "condition": "user.chat2.feelingToday",
+          "cases": [
+            {
+              "value": "Anger",
+              "actions": [
+                {
+                  "$kind": "Microsoft.ChoiceInput",
+                  "$designer": {
+                    "id": "lTXr7V"
+                  },
+                  "defaultLocale": "en-us",
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "prompt": "${ChoiceInput_Prompt_lTXr7V()}",
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "choiceOptions": {
+                    "includeNumbers": true
+                  },
+                  "property": "user.chat2.feelingToday1",
+                  "style": "heroCard",
+                  "choices": [
+                    "Annoyance",
+                    "Frustration",
+                    "Exasperation",
+                    "Argumentativeness",
+                    "Bitterness",
+                    "Vengefulness",
+                    "Fury"
+                  ]
+                }
+              ]
+            },
+            {
+              "value": "Disgust",
+              "actions": [
+                {
+                  "$kind": "Microsoft.ChoiceInput",
+                  "$designer": {
+                    "id": "9KZQDM"
+                  },
+                  "defaultLocale": "en-us",
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "prompt": "${ChoiceInput_Prompt_9KZQDM()}",
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "choiceOptions": {
+                    "includeNumbers": true,
+                    "inlineOrMore": ", or "
+                  },
+                  "property": "user.chat2.feelingToday1",
+                  "style": "heroCard",
+                  "choices": [
+                    "Dislike",
+                    "Aversion",
+                    "Revulsion",
+                    "Abhorrence",
+                    "Loathing",
+                    "Repugnance",
+                    "Distaste"
+                  ]
+                }
+              ]
+            },
+            {
+              "value": "Fear",
+              "actions": [
+                {
+                  "$kind": "Microsoft.ChoiceInput",
+                  "$designer": {
+                    "id": "nUPkit"
+                  },
+                  "defaultLocale": "en-us",
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "prompt": "${ChoiceInput_Prompt_nUPkit()}",
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "choiceOptions": {
+                    "includeNumbers": true,
+                    "inlineOrMore": ", or "
+                  },
+                  "style": "heroCard",
+                  "choices": [
+                    "Trepidation",
+                    "Dread",
+                    "Nervousness",
+                    "Anxiety",
+                    "Horror",
+                    "Panic",
+                    "Terror"
+                  ],
+                  "property": "user.chat2.feelingToday1"
+                }
+              ]
+            },
+            {
+              "value": "At peace",
+              "actions": [
+                {
+                  "$kind": "Microsoft.ChoiceInput",
+                  "$designer": {
+                    "id": "Gi1wxP"
+                  },
+                  "defaultLocale": "en-us",
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "choiceOptions": {
+                    "includeNumbers": true,
+                    "inlineOrMore": ", or ",
+                    "inlineOr": " or ",
+                    "inlineSeparator": ", "
+                  },
+                  "prompt": "${ChoiceInput_Prompt_Gi1wxP()}",
+                  "style": "heroCard",
+                  "choices": [
+                    "Gratified",
+                    "Compassion",
+                    "Calmness",
+                    "Relief",
+                    "Meditative",
+                    "Soulful",
+                    "Relaxed"
+                  ],
+                  "property": "user.chat2.feelingToday1"
+                }
+              ]
+            },
+            {
+              "value": "Happiness",
+              "actions": [
+                {
+                  "$kind": "Microsoft.ChoiceInput",
+                  "$designer": {
+                    "id": "hJXlN2"
+                  },
+                  "defaultLocale": "en-us",
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "prompt": "${ChoiceInput_Prompt_hJXlN2()}",
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "choiceOptions": {
+                    "includeNumbers": true,
+                    "inlineOrMore": ", or ",
+                    "inlineOr": " or "
+                  },
+                  "style": "heroCard",
+                  "choices": [
+                    "Rejoicing",
+                    "Ecstatic",
+                    "Feeling good",
+                    "Cheerful",
+                    "Exuberant",
+                    "Jubilant",
+                    "Euphoric"
+                  ],
+                  "property": "user.chat2.feelingToday1"
+                }
+              ]
+            },
+            {
+              "value": "Sadness",
+              "actions": [
+                {
+                  "$kind": "Microsoft.ChoiceInput",
+                  "$designer": {
+                    "id": "LfqfcP"
+                  },
+                  "defaultLocale": "en-us",
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "prompt": "${ChoiceInput_Prompt_LfqfcP()}",
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "choiceOptions": {
+                    "includeNumbers": true,
+                    "inlineOrMore": ", or "
+                  },
+                  "style": "heroCard",
+                  "choices": [
+                    "Disappointment",
+                    "Discouraged",
+                    "Hopelessness",
+                    "Grief",
+                    "Misery",
+                    "Sorrow",
+                    "Helplessness"
+                  ],
+                  "property": "user.chat2.feelingToday1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "ahl9kd"
+          },
+          "condition": "user.chat2.feelingToday == user.db.out.emotion",
+          "actions": [
+            {
+              "$kind": "Microsoft.ChoiceInput",
+              "$designer": {
+                "id": "LxI5It"
+              },
+              "defaultLocale": "en-us",
+              "disabled": false,
+              "maxTurnCount": 3,
+              "alwaysPrompt": false,
+              "allowInterruptions": false,
+              "prompt": "${ChoiceInput_Prompt_LxI5It()}",
+              "unrecognizedPrompt": "",
+              "invalidPrompt": "",
+              "defaultValueResponse": "",
+              "choiceOptions": {
+                "includeNumbers": true
+              },
+              "style": "heroCard",
+              "choices": [
+                "Count backwards from 20 - 10",
+                "Go for a quick walk",
+                "Go have a glass of water"
+              ],
+              "property": "user.chat2.question1"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.ConfirmInput",
+          "$designer": {
+            "id": "O2oWJ9"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ConfirmInput_Prompt_O2oWJ9()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true
+          },
+          "property": "user.chat2.question2",
+          "style": "heroCard",
+          "confirmChoices": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "qhoznu"
+          },
+          "condition": "user.chat2.question2 == true",
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "dSePQg"
+              },
+              "activity": "${SendActivity_dSePQg()}"
+            }
+          ],
+          "actions": [
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "8Z2PDc"
+              },
+              "condition": "length(user.db.out.cravingstrategy)>0",
+              "actions": [
+                {
+                  "$kind": "Microsoft.ChoiceInput",
+                  "$designer": {
+                    "id": "UMztQI"
+                  },
+                  "defaultLocale": "en-us",
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "prompt": "${ChoiceInput_Prompt_UMztQI()}",
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "choiceOptions": {
+                    "includeNumbers": true,
+                    "inlineOrMore": ", or ",
+                    "inlineOr": " or ",
+                    "inlineSeparator": ", "
+                  },
+                  "style": "heroCard",
+                  "property": "user.chat2.question3",
+                  "choices": "=[user.db.out.cravingstrategy]"
+                },
+                {
+                  "$kind": "Microsoft.ConfirmInput",
+                  "$designer": {
+                    "id": "EamJxA"
+                  },
+                  "defaultLocale": "en-us",
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "choiceOptions": {
+                    "includeNumbers": true
+                  },
+                  "property": "user.chat2.question4",
+                  "style": "heroCard",
+                  "confirmChoices": [
+                    "Yes",
+                    "No"
+                  ],
+                  "prompt": "${ConfirmInput_Prompt_EamJxA()}"
+                },
+                {
+                  "$kind": "Microsoft.IfCondition",
+                  "$designer": {
+                    "id": "mOn6c5"
+                  },
+                  "condition": "user.chat2.question4 == true",
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "ET6Cc8"
+                      },
+                      "activity": "${SendActivity_ET6Cc8()}"
+                    },
+                    {
+                      "$kind": "Microsoft.EndDialog",
+                      "$designer": {
+                        "id": "Zv9ne7"
+                      }
+                    }
+                  ],
+                  "elseActions": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "52gsAr"
+                      },
+                      "activity": "${SendActivity_52gsAr()}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "$kind": "Microsoft.TextInput",
+              "$designer": {
+                "id": "NW7CUK"
+              },
+              "disabled": false,
+              "maxTurnCount": 3,
+              "alwaysPrompt": false,
+              "allowInterruptions": false,
+              "prompt": "${TextInput_Prompt_NW7CUK()}",
+              "unrecognizedPrompt": "",
+              "invalidPrompt": "",
+              "defaultValueResponse": "",
+              "property": "user.chat2.question5"
+            },
+            {
+              "$kind": "Microsoft.TextInput",
+              "$designer": {
+                "id": "o91S8V"
+              },
+              "disabled": false,
+              "maxTurnCount": 3,
+              "alwaysPrompt": false,
+              "allowInterruptions": false,
+              "prompt": "${TextInput_Prompt_o91S8V()}",
+              "unrecognizedPrompt": "",
+              "invalidPrompt": "",
+              "defaultValueResponse": "",
+              "property": "user.chat2.question6"
+            },
+            {
+              "$kind": "Microsoft.ChoiceInput",
+              "$designer": {
+                "id": "sQ62vM"
+              },
+              "defaultLocale": "en-us",
+              "disabled": false,
+              "maxTurnCount": 3,
+              "alwaysPrompt": false,
+              "allowInterruptions": false,
+              "prompt": "${ChoiceInput_Prompt_sQ62vM()}",
+              "unrecognizedPrompt": "",
+              "invalidPrompt": "",
+              "defaultValueResponse": "",
+              "choiceOptions": {
+                "includeNumbers": true,
+                "inlineOrMore": ", or ",
+                "inlineOr": " or "
+              },
+              "style": "heroCard",
+              "choices": [
+                "Breathing exercise",
+                "Motivational video",
+                "Riddles"
+              ],
+              "property": "user.chat2.question7"
+            },
+            {
+              "$kind": "Microsoft.SwitchCondition",
+              "$designer": {
+                "id": "8JSpnv"
+              },
+              "condition": "user.chat2.question7",
+              "cases": [
+                {
+                  "value": "Breathing exercise",
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "dQHG6J"
+                      },
+                      "activity": "${SendActivity_dQHG6J()}"
+                    }
+                  ]
+                },
+                {
+                  "value": "Motivational video",
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.BeginDialog",
+                      "$designer": {
+                        "id": "SLhljA"
+                      },
+                      "activityProcessed": true,
+                      "dialog": "QNAMakerConnectDialog"
+                    }
+                  ]
+                },
+                {
+                  "value": "Riddles",
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "pTG5lK"
+                      },
+                      "activity": "${SendActivity_pTG5lK()}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "$kind": "Microsoft.ConfirmInput",
+              "$designer": {
+                "id": "oAF5ET"
+              },
+              "defaultLocale": "en-us",
+              "disabled": false,
+              "maxTurnCount": 3,
+              "alwaysPrompt": false,
+              "allowInterruptions": false,
+              "prompt": "${ConfirmInput_Prompt_oAF5ET()}",
+              "unrecognizedPrompt": "",
+              "invalidPrompt": "",
+              "defaultValueResponse": "",
+              "choiceOptions": {
+                "includeNumbers": true,
+                "inlineOrMore": ", or "
+              },
+              "style": "heroCard",
+              "confirmChoices": [
+                "Yes",
+                "No"
+              ],
+              "property": "user.chat2.question8"
+            },
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "7OLhJA"
+              },
+              "condition": "user.chat2.question8 == true",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "0hFdLJ"
+                  },
+                  "activity": "${SendActivity_0hFdLJ()}"
+                }
+              ],
+              "elseActions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "LrtQd7"
+                  },
+                  "activity": "${SendActivity_LrtQd7()}"
+                },
+                {
+                  "$kind": "Microsoft.ConfirmInput",
+                  "$designer": {
+                    "id": "Vh8Yh7"
+                  },
+                  "defaultLocale": "en-us",
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "prompt": "${ConfirmInput_Prompt_Vh8Yh7()}",
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "choiceOptions": {
+                    "includeNumbers": true
+                  },
+                  "property": "user.chat2.question9",
+                  "style": "heroCard",
+                  "confirmChoices": [
+                    "Ok"
+                  ]
+                },
+                {
+                  "$kind": "Microsoft.ChoiceInput",
+                  "$designer": {
+                    "id": "QaetcE"
+                  },
+                  "defaultLocale": "en-us",
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "prompt": "${ChoiceInput_Prompt_QaetcE()}",
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "defaultValueResponse": "",
+                  "choiceOptions": {
+                    "includeNumbers": true
+                  },
+                  "style": "heroCard",
+                  "choices": [
+                    "In control",
+                    "Bad",
+                    "Worse"
+                  ],
+                  "property": "user.chat2.question10"
+                },
+                {
+                  "$kind": "Microsoft.IfCondition",
+                  "$designer": {
+                    "id": "EjH5wN"
+                  },
+                  "condition": "user.chat2.question10 == 'In control'",
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "6FtjwG"
+                      },
+                      "activity": "${SendActivity_6FtjwG()}"
+                    }
+                  ],
+                  "elseActions": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "N0Ooer"
+                      },
+                      "activity": "${SendActivity_N0Ooer()}"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "Day2Char.lg",
+  "recognizer": "Day2Char.lu.qna",
+  "id": "Day2Char"
+}

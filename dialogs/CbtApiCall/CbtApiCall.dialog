@@ -11,7 +11,7 @@
     {
       "$kind": "Microsoft.OnBeginDialog",
       "$designer": {
-        "name": "BeginDialog",
+        "name": "fatchBeginDialog",
         "description": "",
         "id": "F4g6fK"
       },
@@ -32,13 +32,12 @@
           "resultProperty": "dialog.api_response",
           "method": "POST",
           "url": "https://cbt.hasura.app/v1/graphql",
-          "body": "{\"query\":\"query MyQuery {\\n  member_history_details(where: {member_name: {_eq: \\\"${user.db.name}\\\"}}) {\\n    feeling_after_exercise\\n  }\\n}\\n\",\"variables\":null,\"operationName\":\"MyQuery\"}",
           "headers": {
             "Content-Type": "application/json",
             "x-hasura-admin-secret": "i9osI6mAd8Hf4tX8jaAp6NxhXce58rBjxFlk4hx2dasEPpqonFeRdzyow01l87HA"
           },
-          "contentType": "application/json; charset=utf-8",
-          "responseType": "json"
+          "responseType": "json",
+          "body": "{\"query\":\"query MyQuery {\\n  member_history_details(where: {member_name: {_eq: \\\"${user.db.name}\\\"}}) {\\n    member_name\\n    feeling_after_exercise\\n    craving_strategy\\n    emotion\\n    hobbies\\n    last_chat_intent\\n  }\\n}\\n\",\"variables\":null,\"operationName\":\"MyQuery\"}"
         },
         {
           "$kind": "Microsoft.IfCondition",
@@ -48,11 +47,39 @@
           "condition": "dialog.api_response.statusCode == 200",
           "actions": [
             {
+              "$kind": "Microsoft.SetProperties",
+              "$designer": {
+                "id": "w6YEpu"
+              },
+              "assignments": [
+                {
+                  "property": "user.db.out.feeling_after_exercise",
+                  "value": "${dialog.api_response.content.data.member_history_details[0].feeling_after_exercise}"
+                },
+                {
+                  "property": "user.db.out.cravingstrategy",
+                  "value": "${dialog.api_response.content.data.member_history_details[0].craving_strategy}"
+                },
+                {
+                  "value": "${dialog.api_response.content.data.member_history_details[0].emotion}",
+                  "property": "user.db.out.emotion"
+                },
+                {
+                  "property": "user.db.out.lastChatIntent",
+                  "value": "${dialog.api_response.content.data.member_history_details[0].last_chat_intent}"
+                },
+                {
+                  "property": "user.db.out.member_name",
+                  "value": "${dialog.api_response.content.data.member_history_details[0].member_name}"
+                }
+              ]
+            },
+            {
               "$kind": "Microsoft.SendActivity",
               "$designer": {
-                "id": "DfdVh5"
+                "id": "2U2aEe"
               },
-              "activity": "${SendActivity_DfdVh5()}"
+              "activity": "${SendActivity_2U2aEe()}"
             }
           ]
         }

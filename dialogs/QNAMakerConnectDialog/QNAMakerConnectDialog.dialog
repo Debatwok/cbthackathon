@@ -11,7 +11,7 @@
     {
       "$kind": "Microsoft.OnBeginDialog",
       "$designer": {
-        "name": "BeginDialog",
+        "name": "QnABeginDialog",
         "description": "",
         "id": "EFy7YF"
       },

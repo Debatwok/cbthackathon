@@ -31,6 +31,13 @@
               "condition": "string(dialog.foreach.value.id) != string(turn.Activity.Recipient.id)",
               "actions": [
                 {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "zeYRv2"
+                  },
+                  "activity": "${SendActivity_zeYRv2()}"
+                },
+                {
                   "$kind": "Microsoft.TextInput",
                   "$designer": {
                     "id": "ryC4AR"
@@ -55,20 +62,39 @@
                   "dialog": "CbtApiCall"
                 },
                 {
-                  "$kind": "Microsoft.BeginDialog",
+                  "$kind": "Microsoft.IfCondition",
                   "$designer": {
-                    "id": "F40uXC"
+                    "id": "6mNJQf"
                   },
-                  "activityProcessed": true,
-                  "dialog": "Initial_Intro"
-                },
-                {
-                  "$kind": "Microsoft.BeginDialog",
-                  "$designer": {
-                    "id": "BHEUQ1"
-                  },
-                  "activityProcessed": true,
-                  "dialog": "chatSession"
+                  "condition": "user.initial.name==user.db.out.member_name",
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.BeginDialog",
+                      "$designer": {
+                        "id": "ckMaAr"
+                      },
+                      "activityProcessed": true,
+                      "dialog": "Day2Char"
+                    }
+                  ],
+                  "elseActions": [
+                    {
+                      "$kind": "Microsoft.BeginDialog",
+                      "$designer": {
+                        "id": "VtfeEX"
+                      },
+                      "activityProcessed": true,
+                      "dialog": "Initial_Intro"
+                    },
+                    {
+                      "$kind": "Microsoft.BeginDialog",
+                      "$designer": {
+                        "id": "SGQXYu"
+                      },
+                      "activityProcessed": true,
+                      "dialog": "chatSession"
+                    }
+                  ]
                 }
               ]
             }

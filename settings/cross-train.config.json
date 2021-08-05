@@ -4,6 +4,7 @@
     "triggers": {
       "": [
         "CbtApiCall.en-us",
+        "Day2Char.en-us",
         "Initial_Intro.en-us",
         "chatSession.en-us"
       ]

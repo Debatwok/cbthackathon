@@ -11,7 +11,7 @@
     {
       "$kind": "Microsoft.OnBeginDialog",
       "$designer": {
-        "name": "BeginDialog",
+        "name": "SaveBeginDialog",
         "description": "",
         "id": "gADXQb"
       },
@@ -23,12 +23,28 @@
           },
           "assignments": [
             {
-              "property": "user.db.name",
+              "property": "user.db.in.name",
               "value": "${user.initial.name}"
             },
             {
-              "property": "user.db.exercise",
+              "property": "user.db.in.lastChatIntent",
+              "value": "${user.chat.lastChatIntent}"
+            },
+            {
+              "property": "user.db.in.emotion",
+              "value": "${user.chat.emotion}"
+            },
+            {
+              "property": "user.db.in.cravingstrategy",
+              "value": "${user.chat.cravingstrategy}"
+            },
+            {
+              "property": "user.db.in.feeling_after_exercise",
               "value": "${user.chat.exercisestep10}"
+            },
+            {
+              "property": "user.db.in.hobbies",
+              "value": "${user.initial.hobbies}"
             }
           ]
         },
@@ -46,7 +62,7 @@
           },
           "contentType": "application/json; charset=utf-8",
           "responseType": "json",
-          "body": "{\"query\":\"mutation MyMutation {\\n  insert_member_history_details(objects: {member_name: \\\"${user.db.name}\\\", feeling_after_exercise: \\\"${user.db.exercise}\\\"}) {\\n    affected_rows\\n  }\\n}\\n\",\"variables\":null,\"operationName\":\"MyMutation\"}"
+          "body": "{\"query\":\"mutation MyMutation {\\n  insert_member_history_details(objects: {last_chat_intent: \\\"${user.db.in.lastChatIntent}\\\", emotion: \\\"${user.db.in.emotion}\\\", craving_strategy: \\\"${user.db.in.cravingstrategy}\\\", feeling_after_exercise: \\\"${user.db.in.feeling_after_exercise}\\\", hobbies: \\\"${user.db.in.hobbies}\\\", member_name: \\\"${user.db.in.name}\\\"}) {\\n    affected_rows\\n  }\\n}\\n\",\"variables\":null,\"operationName\":\"MyMutation\"}"
         },
         {
           "$kind": "Microsoft.IfCondition",

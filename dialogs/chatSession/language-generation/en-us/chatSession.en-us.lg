@@ -58,11 +58,6 @@ Select your emotion:```
     Text = What inspires your feeling of sadness?
 ]
 
-# SendActivity_czf2AR()
-[Activity
-    Text = confirm ${user.chat.emotion1}
-]
-
 # ConfirmInput_Prompt_PoiPw8()
 [Activity
     Text = Do not worry ${user.initial.name}, things will get better, did you feel the need to smoke?  
@@ -264,11 +259,6 @@ I will see you tomorrow but in the meantime, reach out whenever you need.
 # SendActivity_IDSzgq()
 [Activity
     Text = That is wonderful! Keep it up!
-]
-
-# SendActivity_kDV8GQ()
-[Activity
-    Text = need to smoke : ${user.chat.needtosmoke}
 ]
 
 # SendActivity_l9qD36()

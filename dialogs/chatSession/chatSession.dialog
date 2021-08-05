@@ -17,6 +17,14 @@
       },
       "actions": [
         {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "1S4MCp"
+          },
+          "property": "user.chat.lastChatIntent",
+          "value": "negative"
+        },
+        {
           "$kind": "Microsoft.SendActivity",
           "$designer": {
             "id": "L2VA3r"
@@ -347,13 +355,6 @@
           ]
         },
         {
-          "$kind": "Microsoft.SendActivity",
-          "$designer": {
-            "id": "czf2AR"
-          },
-          "activity": "${SendActivity_czf2AR()}"
-        },
-        {
           "$kind": "Microsoft.IfCondition",
           "$designer": {
             "id": "Z9ePNZ"
@@ -433,13 +434,6 @@
               "activity": "${SendActivity_kLxyyd()}"
             }
           ]
-        },
-        {
-          "$kind": "Microsoft.SendActivity",
-          "$designer": {
-            "id": "kDV8GQ"
-          },
-          "activity": "${SendActivity_kDV8GQ()}"
         },
         {
           "$kind": "Microsoft.IfCondition",
@@ -524,7 +518,7 @@
                   },
                   "property": "user.chat.cravingstrategy",
                   "style": "heroCard",
-                  "choices": "=[\"By indulging in a hobbie :\" + user.initial.hobbies, \"Do you want to talk to <Name>, please call to <Phone no>\", \"By listening to music : \" + user.initial.music, \"Others\"]"
+                  "choices": "=[\"By indulging in a hobbie :\" + user.initial.hobbies, \"Do you want to talk to \"+ user.initial.familyMemberName +\", please call to \"+user.initial.familyMemberContact, \"By listening to music : \" + user.initial.music, \"Others\"]"
                 },
                 {
                   "$kind": "Microsoft.SendActivity",
@@ -539,6 +533,14 @@
                     "id": "RsKeZK"
                   },
                   "activity": "${SendActivity_RsKeZK()}"
+                },
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "VBJnxt"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "setlastChatInten"
                 }
               ],
               "elseActions": [
@@ -748,6 +750,14 @@
                             "id": "iTq2nq"
                           },
                           "activity": "${SendActivity_iTq2nq()}"
+                        },
+                        {
+                          "$kind": "Microsoft.BeginDialog",
+                          "$designer": {
+                            "id": "RcM2DK"
+                          },
+                          "activityProcessed": true,
+                          "dialog": "setlastChatInten"
                         }
                       ],
                       "elseActions": [
@@ -1037,6 +1047,14 @@
                                 "id": "tWtEBp"
                               },
                               "activity": "${SendActivity_tWtEBp()}"
+                            },
+                            {
+                              "$kind": "Microsoft.BeginDialog",
+                              "$designer": {
+                                "id": "con5vf"
+                              },
+                              "activityProcessed": true,
+                              "dialog": "setlastChatInten"
                             }
                           ],
                           "elseActions": [
@@ -1048,14 +1066,6 @@
                               "activity": "${SendActivity_bpWGyT()}"
                             }
                           ]
-                        },
-                        {
-                          "$kind": "Microsoft.BeginDialog",
-                          "$designer": {
-                            "id": "J553iJ"
-                          },
-                          "activityProcessed": true,
-                          "dialog": "CbtApiCallSave"
                         },
                         {
                           "$kind": "Microsoft.SendActivity",
@@ -1078,9 +1088,31 @@
                 "id": "IDSzgq"
               },
               "activity": "${SendActivity_IDSzgq()}"
+            },
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "KvxyPC"
+              },
+              "activityProcessed": true,
+              "dialog": "setlastChatInten"
             }
           ],
           "condition": "user.chat.needtosmoke == true"
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "X2QPKj"
+          },
+          "activityProcessed": true,
+          "dialog": "CbtApiCallSave"
+        },
+        {
+          "$kind": "Microsoft.EndDialog",
+          "$designer": {
+            "id": "G9L09k"
+          }
         }
       ]
     }

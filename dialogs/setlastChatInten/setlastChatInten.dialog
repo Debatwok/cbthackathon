@@ -1,0 +1,33 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "bsTrzP",
+    "name": "setlastChatInten",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "SetPropBeginDialog",
+        "description": "",
+        "id": "j81YyN"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "spUqWo"
+          },
+          "property": "user.chat.lastChatIntent",
+          "value": "positive"
+        }
+      ]
+    }
+  ],
+  "generator": "setlastChatInten.lg",
+  "recognizer": "setlastChatInten.lu.qna",
+  "id": "setlastChatInten"
+}

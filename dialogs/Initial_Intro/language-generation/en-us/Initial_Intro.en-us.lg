@@ -23,87 +23,10 @@ Allow me to know a little more about you.```
     Text = At what age did you start smoking daily?
 ]
 
-# SendActivity_36xMvL()
-[Activity
-    Attachments = ${json(SendActivity_36xMvL_attachment_yhJRtE())}
-]
-
-# SendActivity_36xMvL_attachment_yhJRtE()
-> To learn more Adaptive Cards format, read the documentation at
-> https://docs.microsoft.com/en-us/adaptive-cards/getting-started/bots
-- ```{
-  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-  "type": "AdaptiveCard",
-  "version": "1.0",
-  "body": [
-    {
-      "type": "TextBlock",
-      "text": "Date Input"
-    },
-    {
-      "type": "Input.Date",
-      "id": "date",
-      "placeholder": "Enter a date"
-    }
-  ],
-  "actions": [
-    {
-      "type": "Action.Submit",
-      "title": "OK"
-    }
-  ]
-}```
 # TextInput_Prompt_VWeKhV()
 [Activity
     Text = For your quit goal, its now time to set  your quit date(MM/dd/YYYY).
 ]
-
-# SendActivity_QKKhc4()
-[Activity
-    Attachments = ${json(SendActivity_QKKhc4_attachment_Jrc6Xj())}
-]
-
-# SendActivity_QKKhc4_attachment_Jrc6Xj()
-> To learn more Adaptive Cards format, read the documentation at
-> https://docs.microsoft.com/en-us/adaptive-cards/getting-started/bots
-- ```{
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-    "type": "AdaptiveCard",
-    "version": "1.3",
-    "body": [
-        
-        {
-            "type": "TextBlock",
-            "text": "What are you hobbies?"
-        },
-        {
-            "type": "Input.ChoiceSet",
-            "id": "myhobbies",
-            "style": "expanded",
-            "isMultiSelect": true,
-            "choices": [
-                {
-                    "title": "Test1",
-                    "value": "Test1"
-                },
-                {
-                    "title": "test2",
-                    "value": "Test2"
-                },
-                {
-                    "title": "test3",
-                    "value": "Test3"
-                }
-            ]
-        }
-    ],
-    "actions": [
-        {
-            "type": "Action.Submit",
-            "title": "OK"
-        }
-    ]
-}```
 
 # TextInput_Prompt_ylPCln()
 [Activity
@@ -131,3 +54,17 @@ What time of the day suits you best?```
 # SendActivity_CdRKeL_text()
 - ```Also, you can reach out 24X7, I am always there to help!
 Let's get started```
+# ConfirmInput_Prompt_7aivDW()
+[Activity
+    Text = Do you wish to add a family member to help you quit?
+]
+
+# TextInput_Prompt_MsFVik()
+[Activity
+    Text =  Please provide the name of your family member.
+]
+
+# NumberInput_Prompt_4g8lJ2()
+[Activity
+    Text = Please provide the  phone number of your family member.
+]

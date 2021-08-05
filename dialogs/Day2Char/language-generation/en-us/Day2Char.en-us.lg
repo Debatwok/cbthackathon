@@ -1,0 +1,243 @@
+[import](common.lg)
+
+# SendActivity_4eNpBa()
+[Activity
+    Text = ${SendActivity_4eNpBa_text()}
+]
+
+# SendActivity_4eNpBa_text()
+- ```Hi ${user.initial.name}, how are you today?
+You did great yesterday, you are one step closer to your quit journey. Great going indeed!
+Lets keep it up!
+```
+# SendActivity_P9Ikqx()
+[Activity
+    Text = ${SendActivity_P9Ikqx_text()}
+]
+
+# SendActivity_P9Ikqx_text()
+- ```Hi ${user.initial.name}, how are you today?
+Lets continue towards your goals again today. I am sure things will improve. Don’t give up!
+Lets give this another go!
+```
+# ChoiceInput_Prompt_yslABe()
+[Activity
+    Text = How are you feeling today? 
+]
+
+# ChoiceInput_Prompt_lTXr7V()
+[Activity
+    Text = What inspires your feeling of anger?
+]
+
+# ChoiceInput_Prompt_9KZQDM()
+[Activity
+    Text = What inspires your feeling of disgust?
+]
+
+# ChoiceInput_Prompt_nUPkit()
+[Activity
+    Text = What inspires your feeling of Fear?
+]
+
+# ChoiceInput_Prompt_Gi1wxP()
+[Activity
+    Text = What inspires your feeling of being at peace?
+]
+
+# ChoiceInput_Prompt_hJXlN2()
+[Activity
+    Text = What inspires your feeling of happiness?
+]
+
+# ChoiceInput_Prompt_LfqfcP()
+[Activity
+    Text = What inspires your feeling of sadness?
+]
+
+# ChoiceInput_Prompt_LxI5It()
+[Activity
+    Text = ${ChoiceInput_Prompt_LxI5It_text()}
+]
+
+# ChoiceInput_Prompt_LxI5It_text()
+- ```There is a good chance that you may feel the need to smoke today.
+Lets take some proactive actions to curb that feeling.
+Try out one of these options```
+# ConfirmInput_Prompt_O2oWJ9()
+[Activity
+    Text = Are you having a smoking urge?
+]
+
+# SendActivity_dSePQg()
+[Activity
+    Text = ${SendActivity_dSePQg_text()}
+]
+
+# SendActivity_dSePQg_text()
+- ```That is wonderful…keep feeling motivated!
+You are doing excellent. 
+If you happen to feel an urge to smoke…please do have a chat with me first and I will try my best to help you stick to your goal.```
+# ChoiceInput_Prompt_UMztQI()
+[Activity
+    Text = Why don’t you try what you did yesterday?
+]
+
+# ConfirmInput_Prompt_EamJxA()
+[Activity
+    Text = Did this help?
+]
+
+# SendActivity_ET6Cc8()
+[Activity
+    Text = ${SendActivity_ET6Cc8_text()}
+]
+
+# SendActivity_ET6Cc8_text()
+- ```That is wonderful…keep feeling motivated!
+You are doing excellent. 
+If you happen to feel an urge to smoke…please do have a chat with me first and I will try my best to help you stick to your goal.```
+# SendActivity_52gsAr()
+[Activity
+    Text = Not to worry let's hook you to something that will help you more. 
+]
+
+# TextInput_Prompt_NW7CUK()
+[Activity
+    Text = Write down why do you need to smoke?
+]
+
+# TextInput_Prompt_o91S8V()
+[Activity
+    Text = What is your thought process behind this urge?
+]
+
+# ChoiceInput_Prompt_sQ62vM()
+[Activity
+    Text = Can you try and divert yourself from this thought?
+]
+
+# ConfirmInput_Prompt_oAF5ET()
+[Activity
+    Text = Are you feeling more in control now?
+]
+
+# SendActivity_0hFdLJ()
+[Activity
+    Text = ${SendActivity_0hFdLJ_text()}
+]
+
+# SendActivity_0hFdLJ_text()
+- ```That is wonderful…keep feeling motivated!
+You are doing excellent. 
+If you happen to feel an urge to smoke…please do have a chat with me first and I will try my best to help you stick to your goal.```
+# SendActivity_LrtQd7()
+[Activity
+    Text = ${SendActivity_LrtQd7_text()}
+]
+
+# SendActivity_LrtQd7_text()
+- ```Don’t give up. Have faith in yourself. You can do it!
+
+Picture yourself in a certain situation and try to remember what happened using all your senses. 
+For example, if you were at the beach, you might hear the sound of the waves, smell the salty air, feel the warmth of the sand beneath your feet, see the swimmers in the sea and taste the picnic you had for lunch!```
+# ConfirmInput_Prompt_Vh8Yh7()
+[Activity
+    Text = Give yourself some time and focus on the situation that you are imagining. Hit "ok" once you are done. 
+]
+
+# ChoiceInput_Prompt_QaetcE()
+[Activity
+    Text = How are you feeling now?
+]
+
+# SendActivity_6FtjwG()
+[Activity
+    Text = ${SendActivity_6FtjwG_text()}
+]
+
+# SendActivity_6FtjwG_text()
+- ```That is wonderful…keep feeling motivated!
+You are doing excellent. 
+If you happen to feel an urge to smoke…please do have a chat with me first and I will try my best to help you stick to your goal.```
+# SendActivity_N0Ooer()
+[Activity
+    Text = ${SendActivity_N0Ooer_text()}
+]
+
+# SendActivity_N0Ooer_text()
+- ```Very sorry to hear this. 
+Things sometimes seem difficult but its important to remember that there is always space for hope.
+I will see you tomorrow but in the meantime, reach out whenever you need.```
+# SendActivity_dQHG6J()
+[Activity
+    Attachments = ${json(SendActivity_dQHG6J_attachment_8mNSYH())}
+]
+
+# SendActivity_dQHG6J_attachment_8mNSYH()
+> To learn more Adaptive Cards format, read the documentation at
+> https://docs.microsoft.com/en-us/adaptive-cards/getting-started/bots
+- ```{
+    "type": "AdaptiveCard",
+    "version": "1.0",
+    "body": [
+        
+        {
+            "type": "TextBlock",
+            "spacing": "Medium",
+            "size": "Medium",
+            "weight": "Bolder",
+            "text": "Breathing Exercise",
+            "wrap": true
+        },
+        {
+            "type": "ColumnSet",
+            "minHeight": "300px",
+            "columns": [
+                {
+                    "type": "Column",
+                    "backgroundImage": {
+                        "url": "https://media.giphy.com/media/dDXZ3qU5nRBIe82Uit/giphy.gif",
+                        "verticalAlignment": "Center"
+                    }
+                }
+            ]
+        }
+    ]
+}```
+# SendActivity_pTG5lK()
+[Activity
+    Attachments = ${json(SendActivity_pTG5lK_attachment_WiqxOl())}
+]
+
+# SendActivity_pTG5lK_attachment_WiqxOl()
+> To learn more Adaptive Cards format, read the documentation at
+> https://docs.microsoft.com/en-us/adaptive-cards/getting-started/bots
+- ```{
+    "type": "AdaptiveCard",
+    "version": "1.3",
+    "body": [
+        {
+            "type": "TextBlock",
+            "spacing": "Medium",
+            "size": "Medium",
+            "weight": "Bolder",
+            "text": "Clever Riddles",
+            "wrap": true
+        },
+        {
+            "type": "ColumnSet",
+            "minHeight": "220px",
+            "columns": [
+                {
+                    "type": "Column",
+                    "backgroundImage": {
+                        "url": "https://assets.ltkcontent.com/images/102960/thirteen-hearts-riddle_0066f46bde.jpg",
+                        "verticalAlignment": "Center"
+                    }
+                }
+            ]
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+}```

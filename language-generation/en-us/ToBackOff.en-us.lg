@@ -11,3 +11,59 @@
 [Activity
     Text = Hi, I am ToBackOff, what can I call you?
 ]
+
+# SendActivity_zeYRv2()
+[Activity
+    Attachments = ${json(SendActivity_zeYRv2_attachment_1ieWGM())}
+]
+
+# SendActivity_zeYRv2_attachment_1ieWGM()
+> To learn more Adaptive Cards format, read the documentation at
+> https://docs.microsoft.com/en-us/adaptive-cards/getting-started/bots
+- ```{
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "type": "TextBlock",
+            "size": "ExtraLarge",
+            "weight": "Bolder",
+            "text": "ToBackOff Bot",
+            "wrap": true,
+            "color": "Dark",
+            "horizontalAlignment": "Center"
+        },
+        {
+            "type": "TextBlock",
+            "text": "©[QuitNow Bots](https://Quitnow.net)",
+            "wrap": true,
+            "horizontalAlignment": "Right",
+            "size": "Small",
+            "weight": "Bolder",
+            "color": "Dark"
+        },
+        {
+            "type": "Image",
+            "url": "https://images.everydayhealth.com/images/lung-respiratory/stop-smoking/cs-stop-smoking-cognitive-behavior-therapy-1440x810.jpg?w=1110",
+            "altText": "ToBackOff Logo"
+        },
+        {
+            "type": "TextBlock",
+            "text": "If your preferred coping method for stress comes in a packet of 25, you might be hesitant to stop smoking — after all, how else will you handle high pressure situations? Throw in other self-defeating thoughts — “The damage is done, so why should I stop smoking now?” — and you have plenty of reasons that might keep you from quitting.",
+            "wrap": true
+        },
+        {
+            "type": "TextBlock",
+            "text": "This bot will help you quiting smoke.",
+            "wrap": true
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.OpenUrl",
+            "title": "Visit our Website",
+            "url": "https://quitnow.net/"
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.1"
+}```

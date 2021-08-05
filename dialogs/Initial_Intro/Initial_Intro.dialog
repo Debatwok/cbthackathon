@@ -72,13 +72,6 @@
           "property": "user.initial.smokingFrequency"
         },
         {
-          "$kind": "Microsoft.SendActivity",
-          "$designer": {
-            "id": "36xMvL"
-          },
-          "activity": "${SendActivity_36xMvL()}"
-        },
-        {
           "$kind": "Microsoft.TextInput",
           "$designer": {
             "id": "VWeKhV"
@@ -92,13 +85,6 @@
           "invalidPrompt": "",
           "defaultValueResponse": "",
           "property": "user.initial.quitDate"
-        },
-        {
-          "$kind": "Microsoft.SendActivity",
-          "$designer": {
-            "id": "QKKhc4"
-          },
-          "activity": "${SendActivity_QKKhc4()}"
         },
         {
           "$kind": "Microsoft.TextInput",
@@ -131,6 +117,71 @@
           "property": "user.initial.music"
         },
         {
+          "$kind": "Microsoft.ConfirmInput",
+          "$designer": {
+            "id": "7aivDW"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${ConfirmInput_Prompt_7aivDW()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or "
+          },
+          "property": "user.initial.wantToaddFamilyMem",
+          "style": "heroCard",
+          "confirmChoices": [
+            "Yes",
+            "No"
+          ]
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "5fWusu"
+          },
+          "condition": "user.initial.wantToaddFamilyMem == true",
+          "actions": [
+            {
+              "$kind": "Microsoft.TextInput",
+              "$designer": {
+                "id": "MsFVik"
+              },
+              "disabled": false,
+              "maxTurnCount": 3,
+              "alwaysPrompt": false,
+              "allowInterruptions": false,
+              "prompt": "${TextInput_Prompt_MsFVik()}",
+              "unrecognizedPrompt": "",
+              "invalidPrompt": "",
+              "defaultValueResponse": "",
+              "property": "user.initial.familyMemberName"
+            },
+            {
+              "$kind": "Microsoft.NumberInput",
+              "$designer": {
+                "id": "4g8lJ2"
+              },
+              "defaultLocale": "en-us",
+              "disabled": false,
+              "maxTurnCount": 3,
+              "alwaysPrompt": false,
+              "allowInterruptions": false,
+              "prompt": "${NumberInput_Prompt_4g8lJ2()}",
+              "unrecognizedPrompt": "",
+              "invalidPrompt": "",
+              "defaultValueResponse": "",
+              "property": "user.initial.familyMemberContact"
+            }
+          ]
+        },
+        {
           "$kind": "Microsoft.ChoiceInput",
           "$designer": {
             "id": "sqBxng"
@@ -147,10 +198,11 @@
           "choiceOptions": {
             "includeNumbers": true,
             "inlineOrMore": ", or ",
-            "inlineOr": " or "
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
           },
           "choices": [
-            "<b>Let ToBackOff decide</b></br> Any time during the day!",
+            "Let ToBackOff decide: Any time during the day!",
             "Morning  6:00 AM  to 10:00 AM",
             "Evening  5:00 PM to 8:00 PM",
             "Night 8:00 PM to 11:00 AM"

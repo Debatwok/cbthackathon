@@ -1,0 +1,18 @@
+{
+  "profileName": "ToBackOffBotProfile",
+  "jobId": "80832231-d638-457c-a0e8-6bc3b4075be1",
+  "projectId": "21254.07592207802",
+  "time": "2021-08-04T12:16:55.004Z",
+  "log": [
+    "Creating Azure resources...",
+    "Checking the Existence of the Resource Group ...",
+    "Use the Resource Group: CBTQnaMacker at eastus",
+    "> Creating App Registration ...",
+    "App create failed, retrying ...",
+    "App create failed, retrying ...",
+    "App create failed, retrying ...",
+    "App create failed, retrying ...",
+    "{\"name\":\"CREATE_APP_REGISTRATION\",\"message\":\"App create failed! Please file an issue on Github.\",\"stack\":\"Error\\n    at new CustomizeError (C:\\\\Users\\\\dbehera5\\\\AppData\\\\Local\\\\Programs\\\\Bot Framework Composer\\\\resources\\\\app.asar.unpacked\\\\extensions\\\\azurePublish\\\\dist\\\\extension.js:255547:25)\\n    at createCustomizeError2 (C:\\\\Users\\\\dbehera5\\\\AppData\\\\Local\\\\Programs\\\\Bot Framework Composer\\\\resources\\\\app.asar.unpacked\\\\extensions\\\\azurePublish\\\\dist\\\\extension.js:255552:10)\\n    at BotProjectProvision.createApp (C:\\\\Users\\\\dbehera5\\\\AppData\\\\Local\\\\Programs\\\\Bot Framework Composer\\\\resources\\\\app.asar.unpacked\\\\extensions\\\\azurePublish\\\\dist\\\\extension.js:256989:17)\"}",
+    "{\"name\":\"CREATE_APP_REGISTRATION\",\"message\":\"App create failed! Please file an issue on Github.\",\"stack\":\"Error\\n    at new CustomizeError (C:\\\\Users\\\\dbehera5\\\\AppData\\\\Local\\\\Programs\\\\Bot Framework Composer\\\\resources\\\\app.asar.unpacked\\\\extensions\\\\azurePublish\\\\dist\\\\extension.js:255547:25)\\n    at createCustomizeError2 (C:\\\\Users\\\\dbehera5\\\\AppData\\\\Local\\\\Programs\\\\Bot Framework Composer\\\\resources\\\\app.asar.unpacked\\\\extensions\\\\azurePublish\\\\dist\\\\extension.js:255552:10)\\n    at BotProjectProvision.createApp (C:\\\\Users\\\\dbehera5\\\\AppData\\\\Local\\\\Programs\\\\Bot Framework Composer\\\\resources\\\\app.asar.unpacked\\\\extensions\\\\azurePublish\\\\dist\\\\extension.js:256989:17)\"}. See provision.ToBackOffBotProfile.log in your bot folder"
+  ]
+}
