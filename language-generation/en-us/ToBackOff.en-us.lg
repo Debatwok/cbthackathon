@@ -9,7 +9,7 @@
 - Sorry, I didn't get that.
 # TextInput_Prompt_ryC4AR()
 [Activity
-    Text = Hi, I am ToBackOff, what can I call you?
+    Text = Hi, I am MonAmi! what can I call you?
 ]
 
 # SendActivity_zeYRv2()
@@ -23,15 +23,7 @@
 - ```{
     "type": "AdaptiveCard",
     "body": [
-        {
-            "type": "TextBlock",
-            "size": "ExtraLarge",
-            "weight": "Bolder",
-            "text": "ToBackOff Bot",
-            "wrap": true,
-            "color": "Dark",
-            "horizontalAlignment": "Center"
-        },
+        
         {
             "type": "TextBlock",
             "text": "©[QuitNow Bots](https://Quitnow.net)",
@@ -43,27 +35,21 @@
         },
         {
             "type": "Image",
-            "url": "https://images.everydayhealth.com/images/lung-respiratory/stop-smoking/cs-stop-smoking-cognitive-behavior-therapy-1440x810.jpg?w=1110",
+            "url": "https://github.optum.com/achowd6/Youth_Vaping_Study/raw/master/MonAmi.png",
             "altText": "ToBackOff Logo"
         },
         {
             "type": "TextBlock",
-            "text": "If your preferred coping method for stress comes in a packet of 25, you might be hesitant to stop smoking — after all, how else will you handle high pressure situations? Throw in other self-defeating thoughts — “The damage is done, so why should I stop smoking now?” — and you have plenty of reasons that might keep you from quitting.",
+            "text": "Smoking is a monster that enslaves and kills. Timely interventions to give up this habit is always advisable for a healthier life. While the road to quit is in not an easy path to take, a little help from your Cognitive Companion – ‘MonAmi!’, can go a long way. MonAmi! provides help in terms of giving you daily interactive sessions, based on 'Cognitive Behavioral Therapy' and guide you towards your quit goals, without the fear of any side effects.",
             "wrap": true
         },
         {
             "type": "TextBlock",
-            "text": "This bot will help you quiting smoke.",
+            "text": "",
             "wrap": true
-        }
-    ],
-    "actions": [
-        {
-            "type": "Action.OpenUrl",
-            "title": "Visit our Website",
-            "url": "https://quitnow.net/"
         }
     ],
     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
     "version": "1.1"
 }```
+

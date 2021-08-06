@@ -1,0 +1,36 @@
+[import](common.lg)
+
+# SendActivity_fH2jWE()
+[Activity
+    Attachments = ${json(SendActivity_fH2jWE_attachment_hQVW0V())}
+]
+
+# SendActivity_fH2jWE_attachment_hQVW0V()
+> To learn more Adaptive Cards format, read the documentation at
+> https://docs.microsoft.com/en-us/adaptive-cards/getting-started/bots
+- ```{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.0",
+  "body": [
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": ""
+            },
+            {
+              "type": "Image",
+              "url": "https://quickchart.io/chart?c= { type: 'line', data: { labels: ['Day1', 'Day2', 'Day3', 'Day4', 'Day5', 'Day6', 'Day7'], datasets: [ { label: 'days', data: ${user.db.out.graphInputs}, backgroundColor: 'rgb(75, 192, 192)', borderColor: 'rgb(75, 192, 192)', fill: false, pointHoverRadius: 30, } ], }, options: { legend: { position: 'bottom', }, title: { display: true, text: 'Progress Chart', }, }, }"
+            }
+          ]
+        }
+        
+      ]
+    }
+  ]
+}```

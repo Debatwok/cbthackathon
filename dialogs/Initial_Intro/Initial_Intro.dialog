@@ -19,6 +19,29 @@
         {
           "$kind": "Microsoft.SendActivity",
           "$designer": {
+            "id": "wPpFSP"
+          },
+          "activity": "${SendActivity_wPpFSP()}"
+        },
+        {
+          "$kind": "Microsoft.SetProperties",
+          "$designer": {
+            "id": "H3T0jb"
+          },
+          "assignments": [
+            {
+              "property": "user.db.out.progress",
+              "value": 0
+            },
+            {
+              "property": "user.db.out.logged_in_count",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
             "id": "Q44Gce"
           },
           "activity": "${SendActivity_Q44Gce()}"
@@ -26,14 +49,14 @@
         {
           "$kind": "Microsoft.NumberInput",
           "$designer": {
-            "id": "TEBmll"
+            "id": "sXywe8"
           },
           "defaultLocale": "en-us",
           "disabled": false,
           "maxTurnCount": 3,
           "alwaysPrompt": false,
           "allowInterruptions": false,
-          "prompt": "${NumberInput_Prompt_TEBmll()}",
+          "prompt": "${NumberInput_Prompt_sXywe8()}",
           "unrecognizedPrompt": "",
           "invalidPrompt": "",
           "defaultValueResponse": "",
@@ -42,17 +65,17 @@
         {
           "$kind": "Microsoft.NumberInput",
           "$designer": {
-            "id": "ZFor4G"
+            "id": "6nB53s"
           },
           "defaultLocale": "en-us",
           "disabled": false,
           "maxTurnCount": 3,
           "alwaysPrompt": false,
           "allowInterruptions": false,
-          "prompt": "${NumberInput_Prompt_ZFor4G()}",
           "unrecognizedPrompt": "",
           "invalidPrompt": "",
           "defaultValueResponse": "",
+          "prompt": "${NumberInput_Prompt_6nB53s()}",
           "property": "user.initial.startSmokingAge"
         },
         {
@@ -174,10 +197,9 @@
               "alwaysPrompt": false,
               "allowInterruptions": false,
               "prompt": "${NumberInput_Prompt_4g8lJ2()}",
-              "unrecognizedPrompt": "",
-              "invalidPrompt": "",
-              "defaultValueResponse": "",
-              "property": "user.initial.familyMemberContact"
+              "property": "user.initial.familyMemberContact",
+              "invalidPrompt": "${NumberInput_InvalidPrompt_4g8lJ2()}",
+              "unrecognizedPrompt": "${NumberInput_UnrecognizedPrompt_4g8lJ2()}"
             }
           ]
         },
@@ -202,7 +224,7 @@
             "inlineSeparator": ", "
           },
           "choices": [
-            "Let ToBackOff decide: Any time during the day!",
+            "Let MonAmi! decide: Any time during the day!",
             "Morning  6:00 AM  to 10:00 AM",
             "Evening  5:00 PM to 8:00 PM",
             "Night 8:00 PM to 11:00 AM"

@@ -1,0 +1,8 @@
+{
+  "$kind": "Microsoft.LuisRecognizer",
+  "id": "LUIS_plotGraph",
+  "applicationId": "=settings.luis.plotGraph_en_us_lu.appId",
+  "version": "=settings.luis.plotGraph_en_us_lu.version",
+  "endpoint": "=settings.luis.endpoint",
+  "endpointKey": "=settings.luis.endpointKey"
+}

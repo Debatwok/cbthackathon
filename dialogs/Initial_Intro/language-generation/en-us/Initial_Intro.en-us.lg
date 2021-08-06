@@ -13,16 +13,6 @@
 # SendActivity_Q44Gce_text()
 - ```Hi ${user.initial.name}, I understand that you are trying to quit and I am here to help!
 Allow me to know a little more about you.```
-# NumberInput_Prompt_TEBmll()
-[Activity
-    Text = How old are you?
-]
-
-# NumberInput_Prompt_ZFor4G()
-[Activity
-    Text = At what age did you start smoking daily?
-]
-
 # TextInput_Prompt_VWeKhV()
 [Activity
     Text = For your quit goal, its now time to set  your quit date(MM/dd/YYYY).
@@ -67,4 +57,30 @@ Let's get started```
 # NumberInput_Prompt_4g8lJ2()
 [Activity
     Text = Please provide the  phone number of your family member.
+]
+
+
+# NumberInput_InvalidPrompt_4g8lJ2()
+[Activity
+    Text = Sorry, '${this.value}' is not valid. I'm looking for a 10 digit phone number. Please specify a phone number in the form 123456891.
+]
+
+# NumberInput_UnrecognizedPrompt_4g8lJ2()
+[Activity
+    Text = Sorry, I do not understand '${this.value}'. Please enter a Phone nuber in the form of 1234556789.
+]
+
+# NumberInput_Prompt_6nB53s()
+[Activity
+    Text = At what age did you start smoking daily?
+]
+
+# NumberInput_Prompt_sXywe8()
+[Activity
+    Text = How old are you?
+]
+
+# SendActivity_wPpFSP()
+[Activity
+    Text = Therapy session: Day 1
 ]

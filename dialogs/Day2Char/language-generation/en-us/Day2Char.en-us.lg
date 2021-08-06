@@ -241,3 +241,7 @@ I will see you tomorrow but in the meantime, reach out whenever you need.```
     ],
     "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
 }```
+# SendActivity_PBChKj()
+[Activity
+    Text = Therapy session: Day 2
+]

@@ -87,7 +87,6 @@
             "Peer influence",
             "Alcohol consumption",
             "Heated arguments",
-            "Heated arguments",
             "Taking a break",
             "Hunger",
             "Drinking Tea/Coffee",
@@ -432,6 +431,14 @@
                 "id": "kLxyyd"
               },
               "activity": "${SendActivity_kLxyyd()}"
+            },
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "UAntE2"
+              },
+              "activityProcessed": true,
+              "dialog": "setlastChatInten"
             }
           ]
         },
@@ -490,11 +497,13 @@
                   "maxTurnCount": 3,
                   "alwaysPrompt": false,
                   "allowInterruptions": false,
-                  "unrecognizedPrompt": "",
-                  "invalidPrompt": "",
-                  "defaultValueResponse": "",
                   "prompt": "${NumberInput_Prompt_ocWuDt()}",
-                  "property": "user.chat.craving"
+                  "property": "user.chat.craving",
+                  "invalidPrompt": "${NumberInput_InvalidPrompt_ocWuDt()}",
+                  "unrecognizedPrompt": "${NumberInput_UnrecognizedPrompt_ocWuDt()}",
+                  "validations": [
+                    "this.value>0 && this.value<11"
+                  ]
                 },
                 {
                   "$kind": "Microsoft.ChoiceInput",
@@ -517,8 +526,7 @@
                     "inlineSeparator": ", "
                   },
                   "property": "user.chat.cravingstrategy",
-                  "style": "heroCard",
-                  "choices": "=[\"By indulging in a hobbie :\" + user.initial.hobbies, \"Do you want to talk to \"+ user.initial.familyMemberName +\", please call to \"+user.initial.familyMemberContact, \"By listening to music : \" + user.initial.music, \"Others\"]"
+                  "style": "heroCard"
                 },
                 {
                   "$kind": "Microsoft.SendActivity",
@@ -555,10 +563,12 @@
                   "alwaysPrompt": false,
                   "allowInterruptions": false,
                   "prompt": "${NumberInput_Prompt_nmtmzl()}",
-                  "unrecognizedPrompt": "",
-                  "invalidPrompt": "",
-                  "defaultValueResponse": "",
-                  "property": "user.chat.cravingNo"
+                  "property": "user.chat.cravingNo",
+                  "unrecognizedPrompt": "${NumberInput_UnrecognizedPrompt_nmtmzl()}",
+                  "invalidPrompt": "${NumberInput_InvalidPrompt_nmtmzl()}",
+                  "validations": [
+                    "this.value>0 && this.value<11"
+                  ]
                 },
                 {
                   "$kind": "Microsoft.ChoiceInput",
@@ -687,13 +697,6 @@
                       "style": "heroCard",
                       "property": "user.chat.copingmechanisms",
                       "choices": "=[\"Breathing exercises\", \"Motivational videos\", user.initial.hobbies, user.initial.music, \"Talk to a family member\"]"
-                    },
-                    {
-                      "$kind": "Microsoft.SendActivity",
-                      "$designer": {
-                        "id": "tY61Yw"
-                      },
-                      "activity": "${SendActivity_tY61Yw()}"
                     },
                     {
                       "$kind": "Microsoft.IfCondition",
@@ -1064,6 +1067,14 @@
                                 "id": "bpWGyT"
                               },
                               "activity": "${SendActivity_bpWGyT()}"
+                            },
+                            {
+                              "$kind": "Microsoft.SetProperty",
+                              "$designer": {
+                                "id": "nnu527"
+                              },
+                              "property": "user.chat.lastChatIntent",
+                              "value": "negative"
                             }
                           ]
                         },

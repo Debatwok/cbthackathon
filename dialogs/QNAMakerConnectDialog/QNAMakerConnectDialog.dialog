@@ -17,13 +17,6 @@
       },
       "actions": [
         {
-          "$kind": "Microsoft.SendActivity",
-          "$designer": {
-            "id": "NK4ZgW"
-          },
-          "activity": "${SendActivity_NK4ZgW()}"
-        },
-        {
           "$kind": "Microsoft.QnAMakerDialog",
           "$designer": {
             "id": "WYSInD"

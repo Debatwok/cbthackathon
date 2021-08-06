@@ -17,6 +17,33 @@
       },
       "actions": [
         {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "6805Hp"
+          },
+          "condition": "user.chat.lastChatIntent== 'positive'",
+          "actions": [
+            {
+              "$kind": "Microsoft.SetProperty",
+              "$designer": {
+                "id": "baDttX"
+              },
+              "property": "user.db.out.progress",
+              "value": 1
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SetProperty",
+              "$designer": {
+                "id": "ptIaIB"
+              },
+              "property": "user.db.out.progress",
+              "value": 1
+            }
+          ]
+        },
+        {
           "$kind": "Microsoft.SetProperties",
           "$designer": {
             "id": "ubYKgP"
@@ -45,6 +72,10 @@
             {
               "property": "user.db.in.hobbies",
               "value": "${user.initial.hobbies}"
+            },
+            {
+              "property": "user.db.in.logged_in_count",
+              "value": 233
             }
           ]
         },
@@ -70,15 +101,7 @@
             "id": "gY0GVy"
           },
           "condition": "dialog.api_response.statusCode == 200",
-          "actions": [
-            {
-              "$kind": "Microsoft.SendActivity",
-              "$designer": {
-                "id": "30vIKV"
-              },
-              "activity": "${SendActivity_30vIKV()}"
-            }
-          ]
+          "actions": []
         }
       ]
     }

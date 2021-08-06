@@ -1,0 +1,136 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "hzTsQ4",
+    "name": "plotGraph",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "PlotGraphBeginDialog",
+        "description": "",
+        "id": "wXmPoo"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "MsrJ7e"
+          },
+          "property": "user.db.in.graphdata",
+          "value": "${user.initial.name}"
+        },
+        {
+          "$kind": "Microsoft.HttpRequest",
+          "$designer": {
+            "id": "PMbs0a"
+          },
+          "resultProperty": "dialog.api_response",
+          "url": "https://cbt.hasura.app/v1/graphql",
+          "method": "POST",
+          "headers": {
+            "Content-Type": "application/json",
+            "x-hasura-admin-secret": "i9osI6mAd8Hf4tX8jaAp6NxhXce58rBjxFlk4hx2dasEPpqonFeRdzyow01l87HA"
+          },
+          "contentType": "application/json",
+          "responseType": "json",
+          "body": "{\"query\":\"query MyQuery {\\n  member_history_details(order_by: {logged_in_count: asc}, where: {member_name: {_eq: \\\"${user.db.in.graphdata}\\\"}}) {\\n    progress\\n  }\\n}\\n\",\"variables\":null,\"operationName\":\"MyQuery\"}"
+        },
+        {
+          "$kind": "Microsoft.SetProperties",
+          "$designer": {
+            "id": "k511np"
+          },
+          "assignments": [
+            {
+              "property": "user.db.out.gdata",
+              "value": " "
+            },
+            {
+              "property": "user.db.out.x",
+              "value": 1
+            },
+            {
+              "property": "user.db.out.xaxis",
+              "value": " "
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "iPWAyB"
+          },
+          "actions": [
+            {
+              "$kind": "Microsoft.Foreach",
+              "$designer": {
+                "id": "V3Ge9B"
+              },
+              "index": "dialog.foreach.index",
+              "value": "dialog.foreach.value",
+              "itemsProperty": "dialog.api_response.content.data.member_history_details",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SetProperty",
+                  "$designer": {
+                    "id": "NW2asp"
+                  },
+                  "property": "user.db.out.gdata",
+                  "value": "=user.db.out.gdata +\",\"+ dialog.foreach.value.progress"
+                },
+                {
+                  "$kind": "Microsoft.SetProperty",
+                  "$designer": {
+                    "id": "xHlQSV"
+                  },
+                  "property": "user.db.out.xaxis",
+                  "value": "=user.db.out.xaxis + \",'Day\" +user.db.out.x +\"'\""
+                },
+                {
+                  "$kind": "Microsoft.SetProperty",
+                  "$designer": {
+                    "id": "yVQHcE"
+                  },
+                  "property": "user.db.out.x",
+                  "value": "=user.db.out.x+1"
+                }
+              ]
+            },
+            {
+              "$kind": "Microsoft.SetProperty",
+              "$designer": {
+                "id": "FtsfBk"
+              },
+              "property": "user.db.out.graphInputs",
+              "value": "=\"[\" +substring(user.db.out.gdata, 2, (length(user.db.out.gdata)-2))+\"]\""
+            },
+            {
+              "$kind": "Microsoft.SetProperty",
+              "$designer": {
+                "id": "4aV9GI"
+              },
+              "property": "user.db.out.xaxisgraph",
+              "value": "=\"[\" + substring(user.db.out.xaxis, 2, (length(user.db.out.xaxis)-2))+\"]\""
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "fH2jWE"
+              },
+              "activity": "${SendActivity_fH2jWE()}"
+            }
+          ],
+          "condition": "dialog.api_response.statusCode == 200 && count(dialog.api_response.content.data.member_history_details)>0"
+        }
+      ]
+    }
+  ],
+  "generator": "plotGraph.lg",
+  "recognizer": "plotGraph.lu.qna",
+  "id": "plotGraph"
+}

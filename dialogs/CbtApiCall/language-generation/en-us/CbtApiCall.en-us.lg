@@ -1,12 +1,1 @@
 [import](common.lg)
-
-# SendActivity_2U2aEe()
-[Activity
-    Text = ${SendActivity_2U2aEe_text()}
-]
-
-# SendActivity_2U2aEe_text()
-- ```feeling_after_exercise: ${user.db.out.feeling_after_exercise}
-craving_strategy: ${user.db.cravingstrategy}
-emotion: ${user.db.out.emotion}
-last_chat_intent: ${user.db.out.lastChatIntent}```

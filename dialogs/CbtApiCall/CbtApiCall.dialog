@@ -37,7 +37,7 @@
             "x-hasura-admin-secret": "i9osI6mAd8Hf4tX8jaAp6NxhXce58rBjxFlk4hx2dasEPpqonFeRdzyow01l87HA"
           },
           "responseType": "json",
-          "body": "{\"query\":\"query MyQuery {\\n  member_history_details(where: {member_name: {_eq: \\\"${user.db.name}\\\"}}) {\\n    member_name\\n    feeling_after_exercise\\n    craving_strategy\\n    emotion\\n    hobbies\\n    last_chat_intent\\n  }\\n}\\n\",\"variables\":null,\"operationName\":\"MyQuery\"}"
+          "body": "{\"query\":\"query MyQuery {\\n  member_history_details(order_by: {logged_in_count: desc}, where: {member_name: {_eq: \\\"${user.db.name}\\\"}}) {\\n    progress\\n    member_name\\n    logged_in_count\\n    last_chat_intent\\n    hobbies\\n    feeling_after_exercise\\n    emotion\\n    craving_strategy\\n  }\\n}\\n\",\"variables\":null,\"operationName\":\"MyQuery\"}"
         },
         {
           "$kind": "Microsoft.IfCondition",
@@ -71,15 +71,20 @@
                 {
                   "property": "user.db.out.member_name",
                   "value": "${dialog.api_response.content.data.member_history_details[0].member_name}"
+                },
+                {
+                  "property": "user.db.out.logged_in_count",
+                  "value": "=dialog.api_response.content.data.member_history_details[0].logged_in_count"
+                },
+                {
+                  "property": "user.db.out.progress",
+                  "value": "=dialog.api_response.content.data.member_history_details[0].progress"
+                },
+                {
+                  "property": "user.db.out.hobbies",
+                  "value": "=dialog.api_response.content.data.member_history_details[0].hobbies"
                 }
               ]
-            },
-            {
-              "$kind": "Microsoft.SendActivity",
-              "$designer": {
-                "id": "2U2aEe"
-              },
-              "activity": "${SendActivity_2U2aEe()}"
             }
           ]
         }

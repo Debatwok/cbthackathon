@@ -253,7 +253,7 @@ I will see you tomorrow but in the meantime, reach out whenever you need.
 ```
 # ConfirmInput_Prompt_fzKPfv()
 [Activity
-    Text = Great to know Deb, did you feel the need to smoke?
+    Text = Great to know ${user.intial.name} did you feel the need to smoke?
 ]
 
 # SendActivity_IDSzgq()
@@ -296,13 +296,7 @@ I will see you tomorrow but in the meantime, reach out whenever you need.
             ]
         }
     ],
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-    "actions": [
-        {
-            "type": "Action.Submit",
-            "title": "Ok"
-        }
-    ]
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
 }```
 # ConfirmInput_Prompt_ixx3XM()
 [Activity
@@ -356,7 +350,23 @@ Imagine you are adsorbing all  its stillness or strength.```
         }
     ]
 }```
-# SendActivity_tY61Yw()
+
+# NumberInput_UnrecognizedPrompt_nmtmzl()
 [Activity
-    Text = confirm ${user.chat.copingmechanisms}
+    Text = Sorry, I do not understand '${this.value}'. Please enter a number in the form of 4.
+]
+
+# NumberInput_InvalidPrompt_nmtmzl()
+[Activity
+    Text = Sorry, '${this.value}' is not valid. I'm looking for a digit between 1-10.
+]
+
+# NumberInput_InvalidPrompt_ocWuDt()
+[Activity
+    Text = Sorry, '${this.value}' is not valid. I'm looking for a number between 1-10.
+]
+
+# NumberInput_UnrecognizedPrompt_ocWuDt()
+[Activity
+    Text = Sorry, I do not understand '${this.value}'. Please enter an number between 1-10.
 ]

@@ -17,6 +17,21 @@
       },
       "actions": [
         {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "PBChKj"
+          },
+          "activity": "${SendActivity_PBChKj()}"
+        },
+        {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "ETfObK"
+          },
+          "property": "user.chat.lastChatIntent",
+          "value": "negative"
+        },
+        {
           "$kind": "Microsoft.IfCondition",
           "$designer": {
             "id": "QifwNV"
@@ -362,6 +377,14 @@
                 "id": "dSePQg"
               },
               "activity": "${SendActivity_dSePQg()}"
+            },
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "Q1Fl6d"
+              },
+              "activityProcessed": true,
+              "dialog": "setlastChatInten"
             }
           ],
           "actions": [
@@ -433,6 +456,14 @@
                         "id": "ET6Cc8"
                       },
                       "activity": "${SendActivity_ET6Cc8()}"
+                    },
+                    {
+                      "$kind": "Microsoft.BeginDialog",
+                      "$designer": {
+                        "id": "SA6Dqn"
+                      },
+                      "activityProcessed": true,
+                      "dialog": "setlastChatInten"
                     },
                     {
                       "$kind": "Microsoft.EndDialog",
@@ -594,6 +625,14 @@
                     "id": "0hFdLJ"
                   },
                   "activity": "${SendActivity_0hFdLJ()}"
+                },
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "OogTgb"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "setlastChatInten"
                 }
               ],
               "elseActions": [
@@ -665,6 +704,14 @@
                         "id": "6FtjwG"
                       },
                       "activity": "${SendActivity_6FtjwG()}"
+                    },
+                    {
+                      "$kind": "Microsoft.BeginDialog",
+                      "$designer": {
+                        "id": "7ZiR8J"
+                      },
+                      "activityProcessed": true,
+                      "dialog": "setlastChatInten"
                     }
                   ],
                   "elseActions": [
@@ -674,6 +721,14 @@
                         "id": "N0Ooer"
                       },
                       "activity": "${SendActivity_N0Ooer()}"
+                    },
+                    {
+                      "$kind": "Microsoft.SetProperty",
+                      "$designer": {
+                        "id": "gGi6iW"
+                      },
+                      "property": "user.chat.lastChatIntent",
+                      "value": "negative"
                     }
                   ]
                 }

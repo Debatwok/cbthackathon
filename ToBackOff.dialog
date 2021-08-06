@@ -48,7 +48,6 @@
                   "allowInterruptions": false,
                   "unrecognizedPrompt": "",
                   "invalidPrompt": "",
-                  "defaultValueResponse": "",
                   "prompt": "${TextInput_Prompt_ryC4AR()}",
                   "property": "user.initial.name",
                   "value": "=@personName"
@@ -75,6 +74,38 @@
                       },
                       "activityProcessed": true,
                       "dialog": "Day2Char"
+                    },
+                    {
+                      "$kind": "Microsoft.SetProperties",
+                      "$designer": {
+                        "id": "W6foCY"
+                      },
+                      "assignments": [
+                        {
+                          "property": "user.chat.emotion",
+                          "value": "${user.chat2.feelingToday}"
+                        },
+                        {
+                          "property": "user.chat.cravingstrategy",
+                          "value": "${user.db.in.cravingstrategy}"
+                        },
+                        {
+                          "property": "user.chat.exercisestep10",
+                          "value": "${user.chat2.question10}"
+                        },
+                        {
+                          "property": "user.initial.hobbies",
+                          "value": "${user.db.out.hobbies}"
+                        }
+                      ]
+                    },
+                    {
+                      "$kind": "Microsoft.BeginDialog",
+                      "$designer": {
+                        "id": "SwxKiD"
+                      },
+                      "activityProcessed": true,
+                      "dialog": "CbtApiCallSave"
                     }
                   ],
                   "elseActions": [
@@ -98,7 +129,8 @@
                 }
               ]
             }
-          ]
+          ],
+          "value": "dialog.foreach.value"
         }
       ]
     },
