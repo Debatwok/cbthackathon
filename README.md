@@ -1,6 +1,4 @@
-# Welcome to your new MonAmi - Your Cognitive Companion
-
-WATCH THE HACKATHAN VIDEO - https://optum.video.uhc.com/media/OSR_MonAmi_Global_Hackathon_OSR/1_6ga2oxbo
+# Welcome to your new MonAmi Your Cognitive Companion Hackathon Video - https://optum.video.uhc.com/media/OSR_MonAmi_Global_Hackathon_OSR/1_6ga2oxbo
 
 
 We have utilized the power of Azure Bot Composer incorporating the Virtual Assistant capabilities directly into the Composer.
