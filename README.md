@@ -1,27 +1,12 @@
-# Welcome to your new bot
+# Welcome to your new MonAmi - Your Cognitive Companion
 
-This bot project was created using the Empty Bot template, and contains a minimal set of files necessary to have a working bot.
+WATCH THE HACKATHAN VIDEO - https://optum.video.uhc.com/media/OSR_MonAmi_Global_Hackathon_OSR/1_6ga2oxbo
 
-## Next steps
 
-### Start building your bot
-
-Composer can help guide you through getting started building your bot. From your bot settings page (the wrench icon on the left navigation rail), click on the rocket-ship icon on the top right for some quick navigation links.
-
-Another great resource if you're just getting started is the **[guided tutorial](https://docs.microsoft.com/en-us/composer/tutorial/tutorial-introduction)** in our documentation.
-
-### Connect with your users
-
-Your bot comes pre-configured to connect to our Web Chat and DirectLine channels, but there are many more places you can connect your bot to - including Microsoft Teams, Telephony, DirectLine Speech, Slack, Facebook, Outlook and more. Check out all of the places you can connect to on the bot settings page.
-
-### Publish your bot to Azure from Composer
-
-Composer can help you provision the Azure resources necessary for your bot, and publish your bot to them. To get started, create a publishing profile from your bot settings page in Composer (the wrench icon on the left navigation rail). Make sure you only provision the optional Azure resources you need!
-
-### Extend your bot with packages
-
-From Package Manager in Composer you can find useful packages to help add additional pre-built functionality you can add to your bot - everything from simple dialogs & custom actions for working with specific scenarios to custom adapters for connecting your bot to users on clients like Facebook or Slack.
-
-### Extend your bot with code
-
-You can also extend your bot with code - simply open up the folder that was generated for you in the location you chose during the creation process with your favorite IDE (like Visual Studio). You can do things like create custom actions that can be used during dialog flows, create custom middleware to pre-process (or post-process) messages, and more. See [our documentation](https://aka.ms/bf-extend-with-code) for more information.
+We have utilized the power of Azure Bot Composer incorporating the Virtual Assistant capabilities directly into the Composer.
+ 
+Added Natural Language Understanding Capabilities using Language Understanding Intelligent Service (LUIS) - cloud-based conversational AI Cognitive Service with custom machine-learning intelligence to MonAmi's conversational, natural language text to predict overall meaning, and pull out relevant, detailed information for context like name, age, hobbies, emotions, activities, feelings, etc. Followd by QnA/FAQ type Capabilities using QnA Maker which is cloud-based Cognitive API service, integrated and built a custom knowledge base extracting questions & answers from semi-structured content, majorly for the Motivational Videos. The knowledge base gets smarter, too, as it continually learns from user behavior!
+ 
+It has been extensively trained using Natural Language Understanding models directly in the context of editing a dialog - basis user's responses with Natural Language Generation to create bot replies with a great deal of flexibility for grammatically correct, data-driven responses that have a consistent tone for evolved Cognitive Behavioral Therapy over the agreed upon sessions while we have utlized the GraphQL APIs via Hasura Cloud for the session and data tracking for the defined period.
+ 
+Tested via Bot Framework Emulator and can be published to Azure App Service and App Functions basis the subscriptions. 
